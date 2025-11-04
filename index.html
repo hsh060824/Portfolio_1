@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Seokhee Han · Portfolio</title>
+    <meta name="description" content="Interactive portfolio for Seth Seokhee Han, showcasing research, professional experience, awards, and leadership.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark" aria-hidden="true">SH</span>
+            <div class="brand-text">
+                <strong>Seth Seokhee Han</strong>
+                <span>Entrepreneur · Research Scientist · Dartmouth '29</span>
+            </div>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="primary-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#recognition">Recognition</a></li>
+                <li><a href="#activities">Leadership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <h1>Designing safer mobility and equitable learning through data-driven innovation.</h1>
+                <p class="lead">
+                    Seth is a Dartmouth engineering student, entrepreneur, and researcher building
+                    AI systems that improve public safety and education access across global communities.
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="Reference/CV.pdf" target="_blank" rel="noopener">
+                        View Full CV
+                    </a>
+                    <a class="button secondary" href="mailto:seth.s.han.29@dartmouth.edu">
+                        Email Seth
+                    </a>
+                    <a class="button secondary" href="https://www.linkedin.com/in/seth-seokhee-han/" target="_blank" rel="noopener">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+                <dl class="hero-stats">
+                    <div>
+                        <dt>Research Funding Secured</dt>
+                        <dd>$22K+</dd>
+                    </div>
+                    <div>
+                        <dt>Patents</dt>
+                        <dd>1 Granted</dd>
+                    </div>
+                    <div>
+                        <dt>International Awards</dt>
+                        <dd>12+</dd>
+                    </div>
+                </dl>
+            </div>
+            <aside class="hero-card" aria-label="Quick facts">
+                <h2>Quick Facts</h2>
+                <ul>
+                    <li>Co-Founder &amp; CIO @ Drice</li>
+                    <li>Presidential Science Scholar of South Korea</li>
+                    <li>Magnuson Center First Year Fellow</li>
+                    <li>Regeneron ISEF Finalist (2024)</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section class="section" id="education">
+            <div class="section-heading">
+                <h2>Education</h2>
+                <p>Engineering education rooted in innovation and global collaboration.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <header>
+                        <h3>Dartmouth College</h3>
+                        <span class="card-meta">Hanover, NH · 2025 – 2029</span>
+                    </header>
+                    <p class="card-subtitle">Bachelor of Arts in Engineering Sciences</p>
+                    <p>Incoming student exploring intelligent systems, human-centered design, and entrepreneurship.</p>
+                    <ul class="card-tags">
+                        <li>Engineering Sciences</li>
+                        <li>Dartmouth</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <header>
+                        <h3>Cheongshim International Academy</h3>
+                        <span class="card-meta">Gyeonggi-do, South Korea · 2022 – 2025</span>
+                    </header>
+                    <p class="card-subtitle">Korean High School Diploma · GPA 5.0/5.0</p>
+                    <p>Specialized curriculum in research, advanced science, and global leadership.</p>
+                    <ul class="card-tags">
+                        <li>STEM</li>
+                        <li>Research</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="section-heading">
+                <h2>Experience</h2>
+                <p>Entrepreneurial and research leadership across AI, edtech, and public safety.</p>
+            </div>
+            <div class="filter-group" role="toolbar" aria-label="Filter experience">
+                <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-button" type="button" data-filter="research" aria-pressed="false">Research</button>
+                <button class="filter-button" type="button" data-filter="professional" aria-pressed="false">Professional</button>
+            </div>
+            <div class="timeline">
+                <article class="timeline-card" data-category="research professional">
+                    <header>
+                        <h3>Co-Founder &amp; CIO · Drice</h3>
+                        <span class="timeline-date">2022 – 2025</span>
+                    </header>
+                    <p>Developed an AI-powered drone system detecting black ice in real time, unlocking $11K+ in national R&amp;D funding and patent KR 10-2681032.</p>
+                    <footer>
+                        <span class="tag">AI &amp; Robotics</span>
+                        <span class="tag">Entrepreneurship</span>
+                    </footer>
+                </article>
+                <article class="timeline-card" data-category="professional">
+                    <header>
+                        <h3>Data Analyst Intern (CTO Staff) · Enuma, Inc.</h3>
+                        <span class="timeline-date">2025</span>
+                    </header>
+                    <p>Analyzed user engagement across global edtech platforms using SQL and Python to inform product strategy for government partners.</p>
+                    <footer>
+                        <span class="tag">Data Science</span>
+                        <span class="tag">EdTech</span>
+                    </footer>
+                </article>
+                <article class="timeline-card" data-category="professional">
+                    <header>
+                        <h3>Research Assistant Intern (CEO Staff) · Enuma, Inc.</h3>
+                        <span class="timeline-date">2024</span>
+                    </header>
+                    <p>Delivered bi-weekly insights on edtech market trends and helped develop certified digital English and Mathematics curricula for Korea.</p>
+                    <footer>
+                        <span class="tag">Market Research</span>
+                        <span class="tag">Strategy</span>
+                    </footer>
+                </article>
+                <article class="timeline-card" data-category="research">
+                    <header>
+                        <h3>Research Scientist · Drice</h3>
+                        <span class="timeline-date">2022 – 2025</span>
+                    </header>
+                    <p>Led computer vision research with Dr. Hyunwook Chung and Mr. Donghwan Shin, optimizing drone imagery pipelines for icy road detection.</p>
+                    <footer>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Safety Tech</span>
+                    </footer>
+                </article>
+                <article class="timeline-card" data-category="research">
+                    <header>
+                        <h3>Student Researcher · Cheongshim International Academy</h3>
+                        <span class="timeline-date">2024 – 2025</span>
+                    </header>
+                    <p>Created a gait-recognition pipeline using CCTV footage to support missing person identification initiatives.</p>
+                    <footer>
+                        <span class="tag">Gait Recognition</span>
+                        <span class="tag">Public Safety</span>
+                    </footer>
+                </article>
+                <article class="timeline-card" data-category="research">
+                    <header>
+                        <h3>Student Researcher · Cheongshim International Academy</h3>
+                        <span class="timeline-date">2021 – 2022</span>
+                    </header>
+                    <p>Investigated heavy metal absorption using spent mushroom compost to support sustainable remediation practices.</p>
+                    <footer>
+                        <span class="tag">Environmental Science</span>
+                        <span class="tag">Sustainability</span>
+                    </footer>
+                </article>
+                <article class="timeline-card" data-category="professional">
+                    <header>
+                        <h3>Co-Founder &amp; CSO · Justiz</h3>
+                        <span class="timeline-date">2023 – 2024</span>
+                    </header>
+                    <p>Built a language analytics platform combating malicious online behavior, securing $11K+ in government R&amp;D support.</p>
+                    <footer>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Social Impact</span>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <section class="section accent" id="work">
+            <div class="section-heading">
+                <h2>Publications &amp; Patents</h2>
+                <p>Advancing AI for safer infrastructure through peer-reviewed research and protected IP.</p>
+            </div>
+            <div class="split-grid">
+                <article class="card publication">
+                    <header>
+                        <h3>Real-Time Black Ice Detection in Drone View Using YOLOX</h3>
+                        <span class="card-meta">J Stud Res · Vol. 13 No. 2 · May 2024</span>
+                    </header>
+                    <p>Co-first author on a computer vision study demonstrating real-time icy road detection from UAV footage.</p>
+                    <a class="card-link" href="https://doi.org/10.47611/jsrhs.v13i2.6831" target="_blank" rel="noopener">
+                        Read publication
+                    </a>
+                </article>
+                <article class="card patent">
+                    <header>
+                        <h3>Black Ice Identification and Warning System and Method Using Unmanned Aerial Vehicles</h3>
+                        <span class="card-meta">KR Patent 10-2681032 · Granted Jul 2024</span>
+                    </header>
+                    <p>Invented an autonomous UAV system that detects and alerts operators to dangerous black ice conditions.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="recognition">
+            <div class="section-heading">
+                <h2>Scholarships &amp; Awards</h2>
+                <p>Nationally recognized for scientific research, entrepreneurship, and leadership excellence.</p>
+            </div>
+            <div class="filter-group" role="toolbar" aria-label="Filter recognition">
+                <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-button" type="button" data-filter="scholarship" aria-pressed="false">Scholarships</button>
+                <button class="filter-button" type="button" data-filter="award" aria-pressed="false">Awards</button>
+            </div>
+            <div class="masonry">
+                <article class="badge-card" data-category="scholarship">
+                    <h3>Presidential Science Scholarship of South Korea</h3>
+                    <p class="card-meta">2025 · Merit-based full ride scholarship</p>
+                </article>
+                <article class="badge-card" data-category="scholarship">
+                    <h3>James and Agnes Kim Family Scholarship</h3>
+                    <p class="card-meta">2025 · Dartmouth Honorary Paired Scholarship</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>Finalist &amp; National Representative</h3>
+                    <p class="card-meta">Regeneron International Science &amp; Engineering Fair (ISEF) · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>Minister of Science Award</h3>
+                    <p class="card-meta">National Science Contest in Engineering · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>Deputy Prime Minister/Minister of Education Award</h3>
+                    <p class="card-meta">STEAM R&amp;E in Engineering · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>1st Place</h3>
+                    <p class="card-meta">Korea Science &amp; Engineering Fair (KSEF) in Computer Science · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>3rd Place</h3>
+                    <p class="card-meta">POSCO DX AI Youth Challenge · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>1st Place</h3>
+                    <p class="card-meta">Gyeonggi Science Contest in Engineering · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>School Merit Award</h3>
+                    <p class="card-meta">Experiment &amp; Research · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>School Merit Award</h3>
+                    <p class="card-meta">Giftedness in Science · 2024</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>2nd Place</h3>
+                    <p class="card-meta">KSEF in Computer Science · 2023</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>1st Place &amp; National Representative</h3>
+                    <p class="card-meta">Youth International Science Fair (YISF) in Environmental Science · 2022</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>Deputy Prime Minister/Minister of Education Award</h3>
+                    <p class="card-meta">STEAM R&amp;E in Engineering · 2022</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>2nd Place</h3>
+                    <p class="card-meta">KSEF in Environmental Science · 2022</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>2nd Place &amp; Provincial Representative</h3>
+                    <p class="card-meta">Korea Youth Startup Competition · 2022</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>Finalist &amp; Innovation Award</h3>
+                    <p class="card-meta">Promising Student Start-up Team 300+ · 2022</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>School Merit Award</h3>
+                    <p class="card-meta">Giftedness in Science · 2022</p>
+                </article>
+                <article class="badge-card" data-category="award">
+                    <h3>2nd Place</h3>
+                    <p class="card-meta">Youth Science Club in Environmental Science · 2021</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="activities">
+            <div class="section-heading">
+                <h2>Leadership &amp; Engagement</h2>
+                <p>Empowering student founders and building entrepreneurial communities.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card">
+                    <header>
+                        <h3>Executive Board Member · DartUP Dartmouth</h3>
+                        <span class="card-meta">2025 – Present</span>
+                    </header>
+                    <p>Organized Dartmouth’s Social Blueprint Challenge and developed the entrepreneurship curriculum for 30+ members.</p>
+                </article>
+                <article class="card">
+                    <header>
+                        <h3>Magnuson First Year Fellow</h3>
+                        <span class="card-meta">Magnuson Center for Entrepreneurship · 2025 – Present</span>
+                    </header>
+                    <p>One of 15 fellows receiving mentorship from the Magnuson Student Leadership Board and Entrepreneurial Thinking &amp; Leadership Fellows.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="contact-card">
+                <h2>Let’s collaborate</h2>
+                <p>Interested in safer mobility, inclusive education, or student-led ventures? Reach out to explore partnerships, speaking opportunities, or research collaborations.</p>
+                <div class="contact-links">
+                    <a href="mailto:seth.s.han.29@dartmouth.edu" class="contact-link">
+                        <span>Email</span>
+                        <span>seth.s.han.29@dartmouth.edu</span>
+                    </a>
+                    <a href="tel:+16032765846" class="contact-link">
+                        <span>Phone</span>
+                        <span>+1 (603) 276-5846</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/seth-seokhee-han/" target="_blank" rel="noopener" class="contact-link">
+                        <span>LinkedIn</span>
+                        <span>/seth-seokhee-han</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <small>© <span id="year"></span> Seth Seokhee Han. All rights reserved.</small>
+        <a href="#about" class="back-to-top">Back to top ↑</a>
+    </footer>
+</body>
+</html>
