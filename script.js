@@ -72,7 +72,7 @@
     sections.forEach((section) => sectionObserver.observe(section));
 
     // Reveal animation on scroll
-    const revealElements = document.querySelectorAll(".hero-content, .card, .timeline-card, .recognition-item, .engagement-item, .contact-card");
+    const revealElements = document.querySelectorAll(".hero-content, .education-item, .card, .timeline-card, .recognition-item, .engagement-item, .contact-card");
     revealElements.forEach((el) => el.classList.add("reveal"));
 
     const revealObserver = new IntersectionObserver(
