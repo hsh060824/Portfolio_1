@@ -4,7 +4,6 @@
     const navList = document.querySelector(".site-nav ul");
     const navLinks = document.querySelectorAll(".site-nav a");
     const themeToggle = document.getElementById("theme-toggle");
-    const filterGroups = document.querySelectorAll(".filter-group");
     const yearEl = document.getElementById("year");
 
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -73,7 +72,7 @@
     sections.forEach((section) => sectionObserver.observe(section));
 
     // Reveal animation on scroll
-    const revealElements = document.querySelectorAll(".hero-content, .hero-card, .card, .timeline-card, .badge-card, .contact-card");
+    const revealElements = document.querySelectorAll(".hero-content, .card, .timeline-card, .recognition-item, .engagement-item, .contact-card");
     revealElements.forEach((el) => el.classList.add("reveal"));
 
     const revealObserver = new IntersectionObserver(
@@ -92,39 +91,6 @@
     );
 
     revealElements.forEach((el) => revealObserver.observe(el));
-
-    // Filter controls
-    filterGroups.forEach((group) => {
-        const buttons = group.querySelectorAll(".filter-button");
-
-        let container = group.nextElementSibling;
-        while (container && !container.classList.contains("timeline") && !container.classList.contains("masonry")) {
-            container = container.nextElementSibling;
-        }
-
-        if (!container) return;
-
-        const cards = container.children;
-
-        buttons.forEach((button) => {
-            button.setAttribute("aria-pressed", button.classList.contains("active") ? "true" : "false");
-            button.addEventListener("click", () => {
-                buttons.forEach((btn) => {
-                    btn.classList.remove("active");
-                    btn.setAttribute("aria-pressed", "false");
-                });
-                button.classList.add("active");
-                button.setAttribute("aria-pressed", "true");
-
-                const filter = button.dataset.filter ?? "all";
-                Array.from(cards).forEach((card) => {
-                    const categories = card.dataset.category?.split(" ") ?? [];
-                    const isVisible = filter === "all" || categories.includes(filter);
-                    card.classList.toggle("hidden", !isVisible);
-                });
-            });
-        });
-    });
 
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear().toString();

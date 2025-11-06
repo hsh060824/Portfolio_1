@@ -8,8 +8,8 @@
     --color-border: rgba(15, 23, 42, 0.08);
     --color-text: #0f172a;
     --color-text-muted: #475569;
-    --color-accent: #2563eb;
-    --color-accent-soft: rgba(37, 99, 235, 0.12);
+    --color-accent: #00693e;
+    --color-accent-soft: rgba(0, 105, 62, 0.12);
     --shadow-soft: 0 12px 35px rgba(15, 23, 42, 0.08);
     --shadow-card: 0 18px 45px rgba(15, 23, 42, 0.12);
     --transition-fast: 170ms ease;
@@ -22,8 +22,8 @@
     --color-border: rgba(148, 163, 184, 0.16);
     --color-text: #e2e8f0;
     --color-text-muted: #94a3b8;
-    --color-accent: #60a5fa;
-    --color-accent-soft: rgba(96, 165, 250, 0.18);
+    --color-accent: #00693e;
+    --color-accent-soft: rgba(0, 105, 62, 0.24);
     --shadow-soft: 0 12px 35px rgba(2, 6, 23, 0.55);
     --shadow-card: 0 25px 55px rgba(2, 6, 23, 0.65);
 }
@@ -244,7 +244,7 @@ main {
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 2.5rem;
     padding: clamp(2rem, 8vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 8vw, 6rem);
     max-width: var(--max-width);
@@ -434,34 +434,6 @@ main {
     letter-spacing: 0.02em;
 }
 
-.filter-group {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem;
-    background: var(--color-surface);
-    border-radius: 999px;
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-soft);
-    margin-bottom: 2rem;
-}
-
-.filter-button {
-    border: none;
-    background: transparent;
-    color: var(--color-text-muted);
-    padding: 0.5rem 1.1rem;
-    border-radius: 999px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background var(--transition-fast), color var(--transition-fast);
-}
-
-.filter-button.active {
-    background: var(--color-accent);
-    color: #fff;
-}
-
 .timeline {
     display: grid;
     gap: 1.5rem;
@@ -495,8 +467,7 @@ main {
     box-shadow: 0 0 0 6px var(--color-accent-soft);
 }
 
-.timeline-card.hidden,
-.badge-card.hidden {
+.timeline-card.hidden {
     display: none;
 }
 
@@ -507,10 +478,14 @@ main {
 }
 
 .card.publication {
-    background: linear-gradient(165deg, rgba(37, 99, 235, 0.18), transparent 60%), var(--color-surface);
+    background: linear-gradient(165deg, rgba(0, 105, 62, 0.18), transparent 60%), var(--color-surface);
 }
 
-.card.publication .card-link {
+.card.patent {
+    background: linear-gradient(165deg, rgba(0, 105, 62, 0.1), transparent 55%), var(--color-surface);
+}
+
+.card .card-link {
     margin-top: 1.5rem;
     display: inline-flex;
     align-items: center;
@@ -519,30 +494,62 @@ main {
     font-weight: 600;
 }
 
-.card.patent {
-    background: linear-gradient(165deg, rgba(12, 214, 155, 0.12), transparent 55%), var(--color-surface);
+.card .card-link:hover,
+.card .card-link:focus-visible {
+    text-decoration: underline;
 }
 
-.masonry {
-    column-count: 1;
-    column-gap: 1.5rem;
+.recognition-list {
+    margin: 0;
+    padding-left: 1.45rem;
+    display: grid;
+    gap: 0.9rem;
 }
 
-@media (min-width: 600px) {
-    .masonry {
-        column-count: 2;
-    }
+.recognition-item {
+    list-style: disc;
+    list-style-position: outside;
 }
 
-@media (min-width: 900px) {
-    .masonry {
-        column-count: 3;
-    }
+.recognition-item .item-title {
+    display: block;
+    font-weight: 600;
 }
 
-.badge-card {
-    break-inside: avoid;
-    margin-bottom: 1.5rem;
+.recognition-item .item-meta {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+}
+
+.engagement-list {
+    margin: 0;
+    padding-left: 1.5rem;
+    display: grid;
+    gap: 1.3rem;
+}
+
+.engagement-item {
+    list-style: disc;
+    list-style-position: outside;
+}
+
+.engagement-item .item-title {
+    display: block;
+    font-weight: 600;
+}
+
+.engagement-item .item-meta {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.15rem;
+}
+
+.engagement-item p {
+    margin: 0.45rem 0 0;
+    color: var(--color-text-muted);
 }
 
 .contact {
@@ -685,11 +692,6 @@ main {
         align-items: stretch;
     }
 
-    .filter-group {
-        width: 100%;
-        justify-content: space-between;
-    }
-
     .contact-link {
         flex-direction: column;
         gap: 0.4rem;
@@ -697,10 +699,8 @@ main {
     }
 }
 
-[data-theme="dark"] .hero-card,
 [data-theme="dark"] .card,
 [data-theme="dark"] .timeline-card,
-[data-theme="dark"] .badge-card,
 [data-theme="dark"] .contact-card {
     background: var(--color-surface);
 }
